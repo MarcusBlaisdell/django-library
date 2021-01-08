@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Title: {{ book.title }}</h1>
+
+  <p><strong>Author:</strong> <a href="">{{ author.last_name }} {{','}} {{author.first_name}}</a></p>
+  <p><strong>Birthdate:</strong> {{ author.date_of_birth }}</p>
+  {% if author.date_of_death is not null %}
+      <p><strong>Date of death:</strong> {{ author.date_of_death }}</p>
+  {% endif %}
+
+{% endblock %}
